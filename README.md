@@ -1,7 +1,5 @@
 # An introduction to npm
 
-**Introduce Node and npm**
-
 Node is a way of running Chrome's V8 JavaScript engine outside of the browser. You'll be learning more about this later in the course.
 
 npm is Node's package manager. It's a repository of hundreds of thousands of useful pieces of code that you may want to integrate with your Node project.
