@@ -43,3 +43,10 @@ At first glance these appear similar, but there is a distinction: `--save` is fo
 `--save` will update your `package.json` with a section called 'dependencies', whilst `--save-dev` will put the dependency in a section called 'dev-dependencies'.
 
 The idea is to make it clear to other developers who might work on your project what dependencies are required for it to work and what are only needed for the dev environment.
+
+## Tasks
+
+1. Create a new directory
+2. Initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
+3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape --save-dev`
+4. Have a look at the `package.json` file (and peek into `node_modules` if you dare!)
