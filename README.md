@@ -38,7 +38,7 @@ There are two ways to save dependencies:
 + `npm install <package-name> --save` (this is the default for `npm install` in npm5)
 + `npm install <package-name> --save-dev`
 
-At first glance these appear similar, but there is a distinction: `--save` is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `--save-dev` is for development dependencies that your project doesn't need in production (e.g. Browsersync from above is only used whilst developing a site).
+At first glance these appear similar, but there is a distinction: `--save` is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `--save-dev` is for development dependencies that your project doesn't need in production (e.g. testing frameworks are generally only used in development — you don't need it on your live server).
 
 `--save` will update your `package.json` with a section called 'dependencies', whilst `--save-dev` will put the dependency in a section called 'dev-dependencies'.
 
