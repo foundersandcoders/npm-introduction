@@ -20,6 +20,8 @@ Don't worry, you can change your answers later by editing `package.json` manuall
 
 npm will create a `node_modules` folder at the root of your project. This is where any third party modules you install are stored. Don't worry if you see way more files than you expect — npm also puts all the dependencies of the modules you install in here (and their dependencies, and their dependencies and ...)
 
+You may see `npm install -g <package-name>`. The `-g` flag installs the module globally to your machine, rather than into the `node_modules` folder of that specific project. This can be useful for certain kinds of modules (e.g. command-line utilities that you might want to use anywhere).
+
 ### `.gitignore`
 
 This is a good time to mention that you want to keep your `node_modules` folder off Github. There can be hundreds of thousands of files in this directory, which can make for some ugly commits. It can also take up a huge amount of space on something like Github as this folder can easily exceed 100MB for applications with lots of dependencies.
