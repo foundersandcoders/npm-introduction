@@ -37,12 +37,13 @@ If you're working locally you can create a file called `.gitignore` at the root 
 It's useful to declare dependencies within your project. This ensures that other people who clone your repo will be able to replicate your exact environment (since your node modules don't get synced with Github).
 
 There are two ways to save dependencies:
-+ `npm install <package-name> --save` (this is the default for `npm install` in npm5)
++ `npm install <package-name> --save` (this option is not necessary unless you are using a
+  version of npm older then 5.0, see the [npm documentation](https://docs.npmjs.com/cli/install))
 + `npm install <package-name> --save-dev`
 
 At first glance these appear similar, but there is a distinction: `--save` is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `--save-dev` is for development dependencies that your project doesn't need in production (e.g. testing frameworks are generally only used in development — you don't need it on your live server).
 
-`--save` will update your `package.json` with a section called 'dependencies', whilst `--save-dev` will put the dependency in a section called 'dev-dependencies'.
+In recent versions of npm, `npm install` will update your `package.json` with a section called 'dependencies', whilst adding the option `--save-dev` will put the dependency in a section called 'dev-dependencies'.
 
 The idea is to make it clear to other developers who might work on your project what dependencies are required for it to work and what are only needed for the dev environment.
 
