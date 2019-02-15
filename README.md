@@ -36,13 +36,16 @@ If you're working locally you can create a file called `.gitignore` at the root 
 
 It's useful to declare dependencies within your project. This ensures that other people who clone your repo will be able to replicate your exact environment (since your node modules don't get synced with Github).
 
+Dependencies are saved by default from npm version 5+.
+
 There are two ways to save dependencies:
-+ `npm install <package-name> --save` (this is the default for `npm install` in npm5)
-+ `npm install <package-name> --save-dev`
 
-At first glance these appear similar, but there is a distinction: `--save` is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `--save-dev` is for development dependencies that your project doesn't need in production (e.g. testing frameworks are generally only used in development — you don't need it on your live server).
+- `npm install <package-name>` (prior to npm5 you had to save this way: `npm install --save`)
+- `npm install <package-name> -D`
 
-`--save` will update your `package.json` with a section called 'dependencies', whilst `--save-dev` will put the dependency in a section called 'dev-dependencies'.
+At first glance these appear similar, but there is a distinction: the default save is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `-D` is for development dependencies that your project doesn't need in production (e.g. testing frameworks are generally only used in development — you don't need it on your live server).
+
+`npm install <package-name>` will update your `package.json` with a section called 'dependencies', whilst adding `-D` will put the dependency in a section called 'dev-dependencies'.
 
 The idea is to make it clear to other developers who might work on your project what dependencies are required for it to work and what are only needed for the dev environment.
 
@@ -50,5 +53,5 @@ The idea is to make it clear to other developers who might work on your project 
 
 1. Create a new directory
 2. Initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
-3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape --save-dev`
+3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape -D`
 4. Have a look at the `package.json` file (and peek into `node_modules` if you dare!)
