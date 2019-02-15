@@ -40,7 +40,7 @@ Dependencies are saved by default from npm version 5+.
 
 There are two ways to save dependencies:
 
-- `npm install <package-name>` (prior to npm5 you had to save this way: `npm install --save`)
+- `npm install <package-name>` (prior to npm5 you had to save this way: `npm install <package-name> --save`)
 - `npm install <package-name> -D`
 
 At first glance these appear similar, but there is a distinction: the default save is for dependencies that your application needs to run (i.e. things that need to be installed on the server delivering your application). `-D` is for development dependencies that your project doesn't need in production (e.g. testing frameworks are generally only used in development — you don't need it on your live server).
