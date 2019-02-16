@@ -36,8 +36,6 @@ If you're working locally you can create a file called `.gitignore` at the root 
 
 It's useful to declare dependencies within your project. This ensures that other people who clone your repo will be able to replicate your exact environment (since your node modules don't get synced with Github).
 
-Dependencies are saved by default from npm version 5+.
-
 There are two ways to save dependencies:
 
 - `npm install <package-name>` (prior to npm5 you had to save this way: `npm install <package-name> --save`)
