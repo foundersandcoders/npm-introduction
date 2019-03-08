@@ -50,6 +50,6 @@ The idea is to make it clear to other developers who might work on your project 
 ## Tasks
 
 1. Create a new directory
-2. Initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
+2. Inside the new directory, initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
 3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape -D`
 4. Have a look at the `package.json` file (and peek into `node_modules` if you dare!)
