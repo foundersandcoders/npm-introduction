@@ -47,9 +47,29 @@ At first glance these appear similar, but there is a distinction: the default sa
 
 The idea is to make it clear to other developers who might work on your project what dependencies are required for it to work and what are only needed for the dev environment.
 
+### npm scripts
+
+You may have noticed that npm created a section called "scripts" in your `package.json`. These are handy shortcuts you can create to run dependencies you install. Think of them as per project command line aliases.
+
+npm installs executable packages into `node_modules/.bin`, which means you can run them via the command line like this (for example) `node_modules/.bin/cowsay hello`. npm scripts automatically include this directory, so you can instead add a test script like this:
+
+```json
+{
+  "scripts": {
+    "hello": "cowsay hello"
+  }
+}
+```
+
+and run it with `npm run test`.
+
 ## Tasks
 
 1. Create a new directory
-2. Inside the new directory, initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
-3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape -D`
-4. Have a look at the `package.json` file (and peek into `node_modules` if you dare!)
+2. Inside the new directory, initialise the project with `npm init` (you can skip all the questions with `npm init -y`)
+3. Install Cowsay `npm install cowsay -D`
+4. Have a look at the `package.json` file
+5. Open `node_modules` and see if you can find Cowsay
+6. Run `node_modules/.bin/cowsay hello`
+7. Add `"hello": "cowsay hello"` to your npm scripts
+8. Run `npm run hello`
