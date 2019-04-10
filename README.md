@@ -71,5 +71,5 @@ and run it with `npm run greeting`.
 4. Have a look at the `package.json` file
 5. Open `node_modules` and see if you can find Cowsay
 6. Run `node_modules/.bin/cowsay hello`
-7. Add `"hello": "cowsay hello"` to your npm scripts
-8. Run `npm run hello`
+7. Add `"greeting": "cowsay hello"` to your npm scripts
+8. Run `npm run greeting`
