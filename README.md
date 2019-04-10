@@ -61,7 +61,7 @@ npm installs executable packages into `node_modules/.bin`, which means you can r
 }
 ```
 
-and run it with `npm run test`.
+and run it with `npm run greeting`.
 
 ## Tasks
 
