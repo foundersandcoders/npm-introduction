@@ -53,3 +53,11 @@ The idea is to make it clear to other developers who might work on your project 
 2. Inside the new directory, initialise the project with `npm init` (you can skip all the questions with the `-y` flag)
 3. Install the [Tape](https://github.com/substack/tape) testing framework with `npm install tape -D`
 4. Have a look at the `package.json` file (and peek into `node_modules` if you dare!)
+
+## For the mentor: ask the class these questions to solidify understanding: 
+
+1. What is **npm**? What does it do?
+2. What is the difference between `npm init` and `npm install`? In which order would you run the two?
+3. What is a `.gitignore` file and why might we use it?
+4. Which flag saves a module globally? What might the disadvantages of doing this be?
+5. Which flag would you use to save a dev dependency? How would you turn a dependency into a dev dependency?
