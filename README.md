@@ -56,7 +56,7 @@ npm installs executable packages into `node_modules/.bin`, which means you can r
 ```json
 {
   "scripts": {
-    "hello": "cowsay hello"
+    "greeting": "cowsay hello"
   }
 }
 ```
