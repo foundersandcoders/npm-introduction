@@ -51,7 +51,11 @@ The idea is to make it clear to other developers who might work on your project 
 
 You may have noticed that npm created a section called "scripts" in your `package.json`. These are handy shortcuts you can create to run dependencies you install. Think of them as per project command line aliases.
 
-npm installs executable packages into `node_modules/.bin`, which means you can run them via the command line like this (for example) `node_modules/.bin/cowsay hello`. npm scripts automatically include this directory, so you can instead add a test script like this:
+npm installs executable packages into `node_modules/.bin`, which means you can run them via the command line like this (for example) `node_modules/.bin/cowsay hello`. 
+
+npm scripts will automatically look inside `node_modules/.bin` for the package, allowing you to avoid typing the full path `node_modules/.bin/cowsay`, and instead use just the package name, `cowsay`.
+
+This means you can instead add a test script like this:
 
 ```json
 {
@@ -61,7 +65,10 @@ npm installs executable packages into `node_modules/.bin`, which means you can r
 }
 ```
 
-and run it with `npm run greeting`.
+and run it with `npm run greeting`, which is now equivalent to `node_modules/.bin/cowsay hello`.
+
+Note that running `cowsay hello` directly in the terminal will not work, as the terminal does not know to look inside `node_modules/.bin` to find `cowsay`.
+This is an added feature of npm scripts.
 
 ## Tasks
 
